@@ -290,7 +290,7 @@ void test_iterator(void)
 }
 
 int main(void)
-{/*
+{
 	test_destroy_NULL();
 	test_destroy_nonempty();
 	test_queue_simple();
@@ -305,7 +305,7 @@ int main(void)
         test_delete_NULL_queue();
 	test_delete_not_find();
 	test_delete_empty();
-	test_delete_data_NULL();   */
+	test_delete_data_NULL();  
 	test_queue_dequeue_4times();
 	return 0;
 
