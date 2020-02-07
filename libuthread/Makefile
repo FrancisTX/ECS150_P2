@@ -12,7 +12,7 @@ all: $(lib)
 ## TODO: Phase 1.1
 
 $(lib): $(o_file)
-	ar rcs $@ $<
+	ar rcs $@ $^
 	ranlib $@
 
 %.o: %.c
