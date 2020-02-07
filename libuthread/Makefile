@@ -11,6 +11,7 @@ all: $(lib)
 
 $(lib): uthread.o context.o queue.o preempt.o
 	ar rcs $@ $<
+	ranlib $@
 
 preempt.o: preempt.c preempt.c preempt.h uthread.h
 	$(CC) $(CFLAGS) -c -o $@ $< $(DEPFLAGS) 
