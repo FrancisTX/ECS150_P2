@@ -13,17 +13,7 @@ $(lib): uthread.o context.o queue.o preempt.o
 	ar rcs $@ $<
 	ranlib $@
 
-preempt.o: preempt.c preempt.c preempt.h uthread.h
-	$(CC) $(CFLAGS) -c -o $@ $< $(DEPFLAGS) 
-
-uthread.o: uthread.c uthread.h context.h preempt.h queue.h
-	$(CC) $(CFLAGS) -c -o $@ $< $(DEPFLAGS)
-
-context.o: context.c context.h preempt.h uthread.h
-	
-	$(CC) $(CFLAGS) -c -o $@ $< $(DEPFLAGS)
-
-queue.o: queue.c queue.h
+%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(DEPFLAGS)
 
 clean:
