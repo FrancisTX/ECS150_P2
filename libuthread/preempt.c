@@ -19,7 +19,7 @@
 static sigset_t sig_set;
 struct itimerval auto_alarm;
 
-void sig_handler(int signum) {
+void sig_handler() {
     uthread_yield();
 }
 
