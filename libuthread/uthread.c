@@ -197,15 +197,6 @@ int if_in_queue(void *cur_node, void *tid) {
 }
 int uthread_join(uthread_t tid, int *retval)
 {
-    /*
-   while (1) {
-        if (queue_length(ready_list) == 0) {
-            break;
-        }else {
-        uthread_yield();
-        }
-    }
-*/
     /* Can't join main thread */
 	if (tid == 0)
 	    return -1;
